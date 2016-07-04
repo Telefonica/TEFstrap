@@ -1,6 +1,6 @@
 {
   "name": "@telefonica/tefstrap",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Telefonica Bootstrap Theme",
   "keywords": [
     "css",
@@ -56,7 +56,7 @@
     "shim": {
       "js/bootstrap": {
         "deps": "jquery",
-        "exports":"$"
+        "exports": "$"
       }
     },
     "files": [
