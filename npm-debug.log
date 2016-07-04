@@ -1,0 +1,34 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/javier/.nvm/v4.4.1/bin/node',
+1 verbose cli   '/Users/javier/.nvm/v4.4.1/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'release' ]
+2 info using npm@2.14.20
+3 info using node@v4.4.1
+4 verbose stack Error: Failed to parse json
+4 verbose stack No value found for key exports at 59:19
+4 verbose stack         "exports":git  "$"
+4 verbose stack                   ^
+4 verbose stack     at parseError (/Users/javier/.nvm/v4.4.1/lib/node_modules/npm/node_modules/read-package-json/read-json.js:379:11)
+4 verbose stack     at parseJson (/Users/javier/.nvm/v4.4.1/lib/node_modules/npm/node_modules/read-package-json/read-json.js:68:23)
+4 verbose stack     at /Users/javier/.nvm/v4.4.1/lib/node_modules/npm/node_modules/read-package-json/read-json.js:48:5
+4 verbose stack     at /Users/javier/.nvm/v4.4.1/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:78:16
+4 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:380:3)
+5 verbose cwd /Users/javier/Documents/Proyectos/tefstrap
+6 error Darwin 14.5.0
+7 error argv "/Users/javier/.nvm/v4.4.1/bin/node" "/Users/javier/.nvm/v4.4.1/bin/npm" "run" "release"
+8 error node v4.4.1
+9 error npm  v2.14.20
+10 error file /Users/javier/Documents/Proyectos/tefstrap/package.json
+11 error code EJSONPARSE
+12 error Failed to parse json
+12 error No value found for key exports at 59:19
+12 error         "exports":git  "$"
+12 error                   ^
+13 error File: /Users/javier/Documents/Proyectos/tefstrap/package.json
+14 error Failed to parse package.json data.
+14 error package.json must be actual JSON, not just JavaScript.
+14 error
+14 error This is not a bug in npm.
+14 error Tell the package author to fix their package.json file. JSON.parse
+15 verbose exit [ 1, true ]

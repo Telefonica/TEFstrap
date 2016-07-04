@@ -56,7 +56,7 @@
     "shim": {
       "js/bootstrap": {
         "deps": "jquery",
-        "exports":git  "$"
+        "exports":"$"
       }
     },
     "files": [
