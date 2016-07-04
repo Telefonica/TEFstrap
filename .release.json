@@ -7,7 +7,7 @@
     "repo": "git@github.com:Telefonica/TEFstrap.git#gh-pages",
     "stageDir": ".stage",
     "baseDir": ".",
-    "files": ["**/*"]
+    "files": ["index.html", "dist/**/*", "assets/**/*"]
   },
   "commitMessage": "[[CHORE]] Release %s",
   "npm": {
