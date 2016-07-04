@@ -1,34 +1,79 @@
 {
-  "name": "tefstrap",
-  "version": "1.0.0",
-  "description": "Telefonica Bootstrap Themes",
+  "name": "@telefonica/tefstrap",
+  "version": "0.1.0",
+  "description": "Telefonica Bootstrap Theme",
+  "keywords": [
+    "css",
+    "less",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "telefonica",
+    "theme",
+    "bootstrap"
+  ],
+  "homepage": "https://telefonica.github.io/TEFstrap/",
+  "author": "TDAF <tdaf@tid.es>",
+  "style": "dist/css/bootstrap.css",
+  "less": "less/tefstrap.less",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Telefonica/TEFstrap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Telefonica/TEFstrap/issues"
+  },
+  "license": "MIT",
   "scripts": {
-    "clean": "rm -fR dist && mkdir -p dist/{css,js,fonts,img,html}",
+    "clean": "rm -fR dist && mkdir -p dist/{css,js,fonts,img}",
     "prebuild": "npm run clean",
-    "build": "npm run build:css && npm run build:fonts && npm run build:img",
-    "build:theme": "lessc less/tefstrap.less | postcss --use autoprefixer > dist/css/tefstrap.css",
+    "build": "npm run build:css && npm run build:js && npm run build:fonts && npm run build:img",
+    "build:theme": "lessc less/tefstrap.less | postcss --use autoprefixer > dist/css/bootstrap.css",
     "prebuild:css": "npm run build:theme",
-    "build:css": "cleancss dist/css/tefstrap.css > dist/css/tefstrap.min.css",
+    "build:css": "cleancss dist/css/bootstrap.css > dist/css/bootstrap.min.css",
     "build:fonts": "cp node_modules/bootstrap/fonts/* fonts/* dist/fonts/",
     "build:img": "cp img/* dist/img",
+    "build:js": "cp node_modules/bootstrap/dist/js/bootstrap.* dist/js",
     "dev": "npm run watch:css",
     "watch:css": "nodemon --watch less -e less --exec 'npm run build:css'",
-    "release": "release-it -n --github.release --changelogCommand=\"npm run -s changelog\"",
+    "release": "release-it",
     "prepublish": "npm run build"
   },
-  "author": "TDAF <tdaf@tid.es>",
-  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=0.10.1"
+  },
+  "files": [
+    "dist",
+    "fonts",
+    "js/*.js",
+    "less/**/*.less",
+    "LICENSE"
+  ],
+  "jspm": {
+    "main": "js/bootstrap",
+    "shim": {
+      "js/bootstrap": {
+        "deps": "jquery",
+        "exports":git  "$"
+      }
+    },
+    "files": [
+      "css",
+      "fonts",
+      "js"
+    ]
+  },
   "dependencies": {
-    "bootstrap": "^3.3.6",
-    "html5shiv": "^3.7.3",
-    "respond": "^0.9.0"
+    "bootstrap": "^3.3.6"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "clean-css": "^3.4.13",
     "less": "^2.7.1",
     "nodemon": "^1.9.2",
-    "postcss-cli": "^2.5.2"
+    "postcss-cli": "^2.5.2",
+    "release-it": "^2.4.0"
   }
 }

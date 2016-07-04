@@ -1,0 +1,28 @@
+{
+  "name": "tefstrap",
+  "description": "Telefonica Bootstrap Theme",
+  "keywords": [
+    "css",
+    "less",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "telefonica",
+    "theme",
+    "bootstrap"
+  ],
+  "homepage": "https://telefonica.github.io/TEFstrap/",
+  "license": "MIT",
+  "moduleType": "globals",
+  "main": [
+    "dist/js/bootstrap.js",
+    "dist/css/bootstrap.css"
+  ],
+  "ignore": [
+    "/.*"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

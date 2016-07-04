@@ -1,0 +1,22 @@
+{
+  "non-interactive": true,
+  "dist": {
+    "repo": "git@github.com:Telefonica/TEFstrap.git#gh-pages",
+    "stageDir": ".stage",
+    "baseDir": ".",
+    "files": ["**/*"]
+  },
+  "commitMessage": "[[CHORE]] Release %s",
+  "npm": {
+    "publish": true,
+    "publishPath": ".",
+    "tag": "latest",
+    "private": false,
+    "forcePublishSourceRepo": true
+  },
+  "github": {
+    "release": true,
+    "releaseName": "Release %s",
+    "tokenRef": "GITHUB_TOKEN"
+  }
+}
