@@ -1,0 +1,88 @@
+//
+// Navbars for Telefonica
+// --------------------------------------------------
+
+
+
+.navbar-brand {
+  > img {
+    margin-top: -4px;
+  }
+}
+
+.navbar {
+  .navbar-nav {
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        border-left: @ts-navbar-active-border-width solid @brand-primary;
+        @media (min-width: @grid-float-breakpoint) {
+          border-left: none;
+          padding-bottom: @navbar-padding-vertical - @ts-navbar-active-border-width;
+          border-bottom: @ts-navbar-active-border-width solid @brand-primary;
+        }
+      }
+    }
+  }
+
+}
+
+.ts-navbar-product {
+  font-size: @ts-font-size-xlarge;
+  text-transform: uppercase;
+  .navbar-vertical-align(42px)
+}
+
+//
+// Typography
+// --------------------------------------------------
+
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  text-transform: uppercase;
+}
+
+//
+// Forms
+// --------------------------------------------------
+
+// Help text
+//
+// Apply to any element you wish to create light text for placement immediately
+// below a form control. Use for general help, formatting, or instructional text.
+
+.help-block {
+  font-style: italic;
+  color: @text-muted;
+  font-size: @font-size-small;
+}
+
+
+//
+// Navs
+// --------------------------------------------------
+
+
+// Base class
+// --------------------------------------------------
+
+.nav {
+  > li {
+    > a {
+      color: inherit;
+    }
+
+  }
+}
+.ts-company {
+  font-weight: 100;
+}
+
+.ts-product {
+  font-weight: 400;
+}
