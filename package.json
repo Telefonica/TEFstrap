@@ -1,6 +1,6 @@
 {
   "name": "@telefonica/tefstrap",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Telefonica Bootstrap Theme",
   "keywords": [
     "css",
@@ -38,8 +38,7 @@
     "build:js": "cp node_modules/bootstrap/dist/js/bootstrap.* dist/js",
     "dev": "npm run watch:css",
     "watch:css": "nodemon --watch less -e less --exec 'npm run build:css'",
-    "release": "release-it",
-    "prepublish": "npm run build"
+    "release": "release-it"
   },
   "engines": {
     "node": ">=0.10.1"
