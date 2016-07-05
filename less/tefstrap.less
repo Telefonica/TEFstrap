@@ -1,0 +1,182 @@
+//
+// Color palette
+// --------------------------------------------------
+
+// Blues
+@tef-color-blue10: #003245;
+@tef-color-blue09: #004356;
+@tef-color-blue08: #005466;
+@tef-color-blue07: #006476;
+@tef-color-blue06: #007486;
+@tef-color-blue05: #008597;
+@tef-color-blue04: #0095A7;
+@tef-color-blue03: #00A5B7;
+@tef-color-blue02: #00B6C7;
+@tef-color-blue01: #00C6D7;
+
+// Other colors
+@tef-color-highlight-purple: #990099;
+@tef-color-highlight-orange: #FF6633;
+@tef-color-highlight-yellow: #FFFF00;
+@tef-color-highlight-green : #00FF99;
+
+@tef-color-secondary-purple: #663366;
+@tef-color-secondary-purple-65: fade(@tef-color-secondary-purple, 35%);
+@tef-color-secondary-purple-30: fade(@tef-color-secondary-purple, 70%);
+
+@tef-color-secondary-orange: #993300;
+@tef-color-secondary-orange-65: fade(@tef-color-secondary-orange, 35%);
+@tef-color-secondary-orange-30: fade(@tef-color-secondary-orange, 70%);
+
+@tef-color-secondary-yellow: #999933;
+@tef-color-secondary-yellow-65: fade(@tef-color-secondary-yellow, 35%);
+@tef-color-secondary-yellow-30: fade(@tef-color-secondary-yellow, 70%);
+
+@tef-color-secondary-green: #009966;
+@tef-color-secondary-green-65: fade(@tef-color-secondary-green, 35%);
+@tef-color-secondary-green-30: fade(@tef-color-secondary-green, 70%);
+
+// Basics
+@tef-color-white: #FFFFFF;
+@tef-color-black: #000000;
+@tef-color-gray: #515559;
+@tef-color-gray-light: #DFDFDF;
+@tef-color-gray-medium: #898989; // Custom for TEFstrap
+
+
+// Backgrounds
+@tef-color-bg-01: #F6F7F9;
+@tef-color-bg-02: #F1F3F2;
+@tef-color-bg-03: #EDF2F5;
+@tef-color-bg-04: #DDE8EA;
+
+// Links
+@tef-color-link-light: #0086C3;
+@tef-color-link-dark: #5CD2ED;
+
+//
+// Telefonica fonts
+// --------------------------------------------------
+
+#makeFont(@family, @style, @weight, @filename) {
+  @font-face {
+    font-family: @family;
+    src: url('@{icon-font-path}@{filename}.eot');
+    src: url('@{icon-font-path}@{filename}.eot#iefix') format('embedded-opentype'),
+    url('@{icon-font-path}@{filename}.woff2') format('woff2'),
+    url('@{icon-font-path}@{filename}.woff') format('woff'),
+    url('@{icon-font-path}@{filename}.ttf') format('truetype'),
+    url('@{icon-font-path}@{filename}.svg#@{family}') format('svg');
+    font-weight: @weight;
+    font-style: @style;
+  }
+}
+
+#makeFont('Telefonica',     normal, 100, 'TelefonicaWeb-ExtraLight');
+#makeFont('Telefonica',     normal, 300, 'TelefonicaWeb-Light');
+#makeFont('Telefonica',     normal, 400, 'TelefonicaWeb-Regular');
+#makeFont('Telefonica',     italic, 400, 'TelefonicaWeb-RegularItalic');
+#makeFont('Telefonica',     normal, 700, 'TelefonicaWeb-Bold');
+#makeFont('TelefonicaHand', normal, 400, 'TelefonicaWeb-Hand');
+
+//
+// Telefonica own variables
+// --------------------------------------------------
+
+@ts-navbar-active-border-width: 4px;
+
+@ts-font-size-xlarge: ceil((@font-size-base * 1.65)); // ~30px
+@ts-font-size-xsmall: ceil((@font-size-base * 0.6)); // ~12px
+
+
+//
+// Navbars for Telefonica
+// --------------------------------------------------
+
+.navbar-brand {
+  > img {
+    margin-top: -4px;
+  }
+}
+
+.navbar {
+  .navbar-nav {
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        border-left: @ts-navbar-active-border-width solid @brand-primary;
+        @media (min-width: @grid-float-breakpoint) {
+          border-left: none;
+          padding-bottom: @navbar-padding-vertical - @ts-navbar-active-border-width;
+          border-bottom: @ts-navbar-active-border-width solid @brand-primary;
+        }
+      }
+    }
+  }
+
+}
+
+.ts-navbar-product {
+  font-size: @ts-font-size-xlarge;
+  text-transform: uppercase;
+  .navbar-vertical-align(42px)
+}
+
+//
+// Typography
+// --------------------------------------------------
+
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  text-transform: uppercase;
+}
+
+//
+// Forms
+// --------------------------------------------------
+
+// Help text
+//
+// Apply to any element you wish to create light text for placement immediately
+// below a form control. Use for general help, formatting, or instructional text.
+
+.help-block {
+  font-style: italic;
+  color: @text-muted;
+  font-size: @font-size-small;
+}
+
+
+//
+// Navs
+// --------------------------------------------------
+
+
+// Base class
+// --------------------------------------------------
+
+.nav {
+  > li {
+    > a {
+      color: inherit;
+    }
+
+  }
+}
+
+//
+// Custom components
+// --------------------------------------------------
+.ts-company {
+  font-weight: 100;
+}
+
+.ts-product {
+  font-weight: 400;
+}
+
