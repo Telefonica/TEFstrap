@@ -16,7 +16,7 @@
   "homepage": "https://telefonica.github.io/TEFstrap/",
   "author": "TDAF <tdaf@tid.es>",
   "style": "dist/css/bootstrap.css",
-  "less": "less/tefstrap.less",
+  "less": "less/bootstrap.less",
   "main": "index.js",
   "repository": {
     "type": "git",

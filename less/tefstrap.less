@@ -117,12 +117,6 @@
 
 }
 
-.ts-navbar-product {
-  font-size: @ts-font-size-xlarge;
-  text-transform: uppercase;
-  .navbar-vertical-align(42px)
-}
-
 //
 // Typography
 // --------------------------------------------------
@@ -134,6 +128,7 @@
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   text-transform: uppercase;
+  color: @tef-color-blue03;
 }
 
 //
@@ -170,13 +165,54 @@ h1, h2, h3, h4, h5, h6,
 }
 
 //
+// Jumbotron
+// --------------------------------------------------
+.jumbotron {
+  h1, .h1,
+  h2, .h2,
+  h3, .h3
+  {
+    .ts-highlighted;
+    .ts-highlighted-purple;
+  }
+}
+
+//
 // Custom components
 // --------------------------------------------------
-.ts-company {
-  font-weight: 100;
+
+.ts-highlighted {
+  text-transform: none;
+  font-weight: 300;
+  color: inherit;
+  &:after {
+    font-weight: 400;
+    content: '\005F';
+    margin-left: -0.02em;
+  }
+  .ts-highlighted-purple;
 }
 
-.ts-product {
-  font-weight: 400;
+.ts-highlighted-orange {
+  &:after {
+    color: @tef-color-highlight-orange;
+  }
 }
 
+.ts-highlighted-yellow {
+  &:after {
+    color: @tef-color-highlight-yellow;
+  }
+}
+
+.ts-highlighted-green {
+  &:after {
+    color: @tef-color-highlight-green;
+  }
+}
+
+.ts-highlighted-purple {
+  &:after {
+    color: @tef-color-highlight-purple;
+  }
+}
