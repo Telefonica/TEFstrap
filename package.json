@@ -30,7 +30,7 @@
     "clean": "rm -fR dist && mkdir -p dist/{css,js,fonts,img}",
     "prebuild": "npm run clean",
     "build": "npm run build:css && npm run build:js && npm run build:fonts && npm run build:img",
-    "build:theme": "lessc less/tefstrap.less | postcss --use autoprefixer > dist/css/bootstrap.css",
+    "build:theme": "lessc less/bootstrap.less | postcss --use autoprefixer > dist/css/bootstrap.css",
     "prebuild:css": "npm run build:theme",
     "build:css": "cleancss dist/css/bootstrap.css > dist/css/bootstrap.min.css",
     "build:fonts": "cp node_modules/bootstrap/fonts/* fonts/* dist/fonts/",
@@ -38,7 +38,7 @@
     "build:js": "cp node_modules/bootstrap/dist/js/bootstrap.* dist/js",
     "dev": "npm run watch:css",
     "watch:css": "nodemon --watch less -e less --exec 'npm run build:css'",
-    "publish:gh-pages": "gh-pages --src '{dist/**/*,assets/**/*,index.html}' -d .",
+    "publish:gh-pages": "gh-pages --src '{dist/**/*,assets/**/*,less/**/*,index.html}' -d .",
     "release": "npm run build && release-it && npm run publish:gh-pages"
   },
   "engines": {

@@ -6714,7 +6714,7 @@ button.close {
 @font-face {
   font-family: 'TelefonicaHand';
   src: url('../fonts/TelefonicaWeb-Hand.eot');
-  src: url('../fonts/TelefonicaWeb-Hand.eot#iefix') format('embedded-opentype'), url('../fonts/TelefonicaWeb-Hand.woff2') format('woff2'), url('../fonts/TelefonicaWeb-Hand.woff') format('woff'), url('../fonts/TelefonicaWeb-Hand.ttf') format('truetype'), url('../fonts/TelefonicaWeb-Hand.svg#Telefonica') format('svg');
+  src: url('../fonts/TelefonicaWeb-Hand.eot#iefix') format('embedded-opentype'), url('../fonts/TelefonicaWeb-Hand.woff2') format('woff2'), url('../fonts/TelefonicaWeb-Hand.woff') format('woff'), url('../fonts/TelefonicaWeb-Hand.ttf') format('truetype'), url('../fonts/TelefonicaWeb-Hand.svg#TelefonicaHand') format('svg');
   font-weight: 400;
   font-style: normal;
 }
