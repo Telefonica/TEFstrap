@@ -38,7 +38,8 @@
     "build:js": "cp node_modules/bootstrap/dist/js/bootstrap.* dist/js",
     "dev": "npm run watch:css",
     "watch:css": "nodemon --watch less -e less --exec 'npm run build:css'",
-    "release": "release-it"
+    "publish:gh-pages": "gh-pages --src '{dist/**/*,assets/**/*,index.html}' -d .",
+    "release": "npm run build && release-it && npm run publish:gh-pages"
   },
   "engines": {
     "node": ">=0.10.1"
@@ -70,6 +71,7 @@
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "clean-css": "^3.4.13",
+    "gh-pages": "^0.11.0",
     "less": "^2.7.1",
     "nodemon": "^1.9.2",
     "postcss-cli": "^2.5.2",

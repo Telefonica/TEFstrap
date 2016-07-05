@@ -3,20 +3,9 @@
   "verbose": true,
   "dry-run": false,
   "pkgFiles": ["package.json", "bower.json"],
-  "buildCommand": "npm run build",
-  "dist": {
-    "repo": "git@github.com:Telefonica/TEFstrap.git#gh-pages",
-    "stageDir": ".stage",
-    "baseDir": "dist",
-    "files": ["index.html", "dist/**/*", "assets/**/*"]
-  },
   "commitMessage": "[[CHORE]] Release %s",
   "npm": {
-    "publish": true,
-    "publishPath": ".",
-    "tag": "latest",
-    "private": false,
-    "forcePublishSourceRepo": true
+    "publish": true
   },
   "github": {
     "release": true,
