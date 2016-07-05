@@ -146,7 +146,7 @@
 
 @btn-default-color:              @tef-color-blue10;
 @btn-default-bg:                 @tef-color-white;
-@btn-default-border:             @tef-color-gray;
+@btn-default-border:             @tef-color-gray-medium;
 
 @btn-primary-color:              @tef-color-white;
 @btn-primary-bg:                 @brand-primary;
@@ -188,7 +188,7 @@
 //** Text color for `<input>`s
 @input-color:                    @tef-color-blue10;
 //** `<input>` border color
-@input-border:                   @tef-color-gray;
+@input-border:                   @tef-color-gray-medium;
 
 // TODO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
 //** Default `.form-control` border radius
@@ -216,7 +216,7 @@
 @form-group-margin-bottom:       20px;
 
 @legend-color:                   @tef-color-blue05;
-@legend-border-color:            @tef-color-gray;
+@legend-border-color:            @tef-color-gray-medium;
 
 //** Background color for textual input addons
 @input-group-addon-bg:           @tef-color-bg-02;
@@ -234,9 +234,9 @@
 //** Background for the dropdown menu.
 @dropdown-bg:                    @tef-color-white;
 //** Dropdown menu `border-color`.
-@dropdown-border:                rgba(0,0,0,.15);
+@dropdown-border:                @tef-color-gray-light;
 //** Dropdown menu `border-color` **for IE8**.
-@dropdown-fallback-border:       #ccc;
+@dropdown-fallback-border:       @tef-color-gray-light;
 //** Divider color for between dropdown items.
 @dropdown-divider-bg:            @tef-color-gray-light;
 
@@ -259,7 +259,7 @@
 @dropdown-header-color:          @tef-color-gray;
 
 //** Deprecated `@dropdown-caret-color` as of v3.1.0
-@dropdown-caret-color:           #000;
+@dropdown-caret-color:           @tef-color-black;
 
 
 //-- Z-index master list
@@ -540,9 +540,9 @@
 //** Popover maximum width
 @popover-max-width:                   276px;
 //** Popover border color
-@popover-border-color:                rgba(0,0,0,.2);
+@popover-border-color:                @tef-color-gray-light;
 //** Popover fallback border color
-@popover-fallback-border-color:       @tef-color-bg-04;
+@popover-fallback-border-color:       @tef-color-gray-light;
 
 //** Popover title background color
 @popover-title-bg:                    darken(@popover-bg, 3%);
@@ -598,9 +598,9 @@
 //** Background color of modal content area
 @modal-content-bg:                             @tef-color-white;
 //** Modal content border color
-@modal-content-border-color:                   rgba(0,0,0,.2);
+@modal-content-border-color:                   @tef-color-gray-medium;
 //** Modal content border color **for IE8**
-@modal-content-fallback-border-color:          @tef-color-gray;
+@modal-content-fallback-border-color:          @tef-color-gray-medium;
 
 //** Modal backdrop background color
 @modal-backdrop-bg:           @tef-color-black;
@@ -761,7 +761,7 @@
 //##
 
 @well-bg:                     @tef-color-bg-04;
-@well-border:                 @tef-color-gray-light;
+@well-border:                 @tef-color-gray-medium;
 
 
 //== Badges
@@ -794,16 +794,16 @@
 //** Breadcrumb text color
 @breadcrumb-color:              @tef-color-gray;
 //** Text color of current page in the breadcrumb
-@breadcrumb-active-color:       @tef-color-gray;
+@breadcrumb-active-color:       @component-active-bg;
 //** Textual separator for between breadcrumb elements
-@breadcrumb-separator:          "/";
+@breadcrumb-separator:          ">";
 
 
 //== Carousel
 //
 //##
 
-@carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6);
+@carousel-text-shadow:                        0 1px 2px @tef-color-gray-light;
 
 @carousel-control-color:                      @tef-color-white;
 @carousel-control-width:                      15%;
