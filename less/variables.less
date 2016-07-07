@@ -8,13 +8,13 @@
 //## Gray and brand colors for use across Bootstrap.
 
 @gray-base:              #000;
-@gray-darker:            lighten(@gray-base, 13.5%); // #222
-@gray-dark:              lighten(@gray-base, 20%);   // #333
-@gray:                   lighten(@gray-base, 33.5%); // #555
-@gray-light:             lighten(@gray-base, 46.7%); // #777
-@gray-lighter:           lighten(@gray-base, 93.5%); // #eee
+@gray-darker:            @tef-color-gray-darker; // #222
+@gray-dark:              @tef-color-gray-dark;   // #333
+@gray:                   @tef-color-gray; // #515559
+@gray-light:             @tef-color-gray-light; // #999
+@gray-lighter:           @tef-color-gray-lighter; // #DFDFDF
 
-@brand-primary:         @tef-color-blue04;
+@brand-primary:         @tef-color-blue05;
 @brand-success:         @tef-color-secondary-green;
 @brand-info:            @tef-color-secondary-purple;
 @brand-warning:         @tef-color-secondary-yellow;
@@ -60,7 +60,7 @@
 @font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
 
 //** Unit-less `line-height` for use in components like buttons.
-@line-height-base:        1.428571429; // 20/14
+@line-height-base:        1.4; // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
@@ -135,7 +135,7 @@
 @table-bg-active:               @tef-color-bg-04;
 
 //** Border color for table and cell borders.
-@table-border-color:            @tef-color-gray-light;
+@table-border-color:            @gray-light;
 
 
 //== Buttons
@@ -146,7 +146,7 @@
 
 @btn-default-color:              @tef-color-blue10;
 @btn-default-bg:                 @tef-color-white;
-@btn-default-border:             @tef-color-gray-medium;
+@btn-default-border:             @gray-light;
 
 @btn-primary-color:              @tef-color-white;
 @btn-primary-bg:                 @brand-primary;
@@ -168,7 +168,7 @@
 @btn-danger-bg:                  @brand-danger;
 @btn-danger-border:              darken(@btn-danger-bg, 5%);
 
-@btn-link-disabled-color:        @gray-light;
+@btn-link-disabled-color:        @gray-lighter;
 
 // Allows for customizing button radius independently from global border radius
 @btn-border-radius-base:         @border-radius-base;
@@ -186,9 +186,9 @@
 @input-bg-disabled:              @tef-color-bg-01;
 
 //** Text color for `<input>`s
-@input-color:                    @tef-color-blue10;
+@input-color:                    @gray;
 //** `<input>` border color
-@input-border:                   @tef-color-gray-medium;
+@input-border:                   @gray-light;
 
 // TODO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
 //** Default `.form-control` border radius
@@ -203,7 +203,7 @@
 @input-border-focus:             @tef-color-blue05;
 
 //** Placeholder text color
-@input-color-placeholder:        @tef-color-gray-light;
+@input-color-placeholder:        @gray-lighter;
 
 //** Default `.form-control` height
 @input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
@@ -216,7 +216,7 @@
 @form-group-margin-bottom:       20px;
 
 @legend-color:                   @tef-color-blue05;
-@legend-border-color:            @tef-color-gray-medium;
+@legend-border-color:            @gray-light;
 
 //** Background color for textual input addons
 @input-group-addon-bg:           @tef-color-bg-02;
@@ -234,14 +234,14 @@
 //** Background for the dropdown menu.
 @dropdown-bg:                    @tef-color-white;
 //** Dropdown menu `border-color`.
-@dropdown-border:                @tef-color-gray-light;
+@dropdown-border:                @gray-light;
 //** Dropdown menu `border-color` **for IE8**.
-@dropdown-fallback-border:       @tef-color-gray-light;
+@dropdown-fallback-border:       @gray-light;
 //** Divider color for between dropdown items.
-@dropdown-divider-bg:            @tef-color-gray-light;
+@dropdown-divider-bg:            @gray-light;
 
 //** Dropdown link text color.
-@dropdown-link-color:            @text-color;
+@dropdown-link-color:            @gray-dark;
 //** Hover color for dropdown links.
 @dropdown-link-hover-color:      darken(@dropdown-link-color, 5%);
 //** Hover background for dropdown links.
@@ -253,10 +253,10 @@
 @dropdown-link-active-bg:        @component-active-bg;
 
 //** Disabled dropdown menu item background color.
-@dropdown-link-disabled-color:   @tef-color-gray-light;
+@dropdown-link-disabled-color:   @gray-lighter;
 
 //** Text color for headers within dropdown menus.
-@dropdown-header-color:          @tef-color-gray;
+@dropdown-header-color:          @gray-light;
 
 //** Deprecated `@dropdown-caret-color` as of v3.1.0
 @dropdown-caret-color:           @tef-color-black;
@@ -361,7 +361,7 @@
 @navbar-margin-bottom:             @line-height-computed;
 @navbar-border-radius:             @border-radius-base;
 @navbar-padding-horizontal:        floor((@grid-gutter-width / 2));
-@navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
+@navbar-padding-vertical:          ceil((@navbar-height - @line-height-computed) / 2);
 @navbar-collapse-max-height:       400px;
 
 @navbar-default-color:             @tef-color-white;
@@ -369,16 +369,16 @@
 @navbar-default-border:            @tef-color-blue10;
 
 // Navbar links
-@navbar-default-link-color:                @tef-color-gray-light;
+@navbar-default-link-color:                @gray-lighter;
 @navbar-default-link-hover-color:          @tef-color-white;
 @navbar-default-link-hover-bg:             transparent;
 @navbar-default-link-active-color:         @tef-color-white;
 @navbar-default-link-active-bg:            transparent;
-@navbar-default-link-disabled-color:       @tef-color-gray;
+@navbar-default-link-disabled-color:       @gray;
 @navbar-default-link-disabled-bg:          transparent;
 
 // Navbar brand label
-@navbar-default-brand-color:               @tef-color-gray-light;
+@navbar-default-brand-color:               @gray-light;
 @navbar-default-brand-hover-color:         @tef-color-white;
 @navbar-default-brand-hover-bg:            transparent;
 
@@ -392,7 +392,7 @@
 // Reset inverted navbar basics
 @navbar-inverse-color:                      @tef-color-blue10;
 @navbar-inverse-bg:                         @tef-color-bg-02;
-@navbar-inverse-border:                     @tef-color-bg-04;
+@navbar-inverse-border:                     @tef-color-gray;
 
 // Inverted navbar links
 @navbar-inverse-link-color:                 @tef-color-blue10;
@@ -400,7 +400,7 @@
 @navbar-inverse-link-hover-bg:              transparent;
 @navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
 @navbar-inverse-link-active-bg:             transparent;
-@navbar-inverse-link-disabled-color:        @tef-color-gray-light;
+@navbar-inverse-link-disabled-color:        @gray-lighter;
 @navbar-inverse-link-disabled-bg:           transparent;
 
 // Inverted navbar brand label
@@ -422,19 +422,19 @@
 @nav-link-padding:                          10px 15px;
 @nav-link-hover-bg:                         @tef-color-bg-02;
 
-@nav-disabled-link-color:                   @tef-color-gray-light;
-@nav-disabled-link-hover-color:             @tef-color-gray-light;
+@nav-disabled-link-color:                   @gray-lighter;
+@nav-disabled-link-hover-color:             @gray-lighter;
 
 //== Tabs
-@nav-tabs-border-color:                     @tef-color-gray-light;
+@nav-tabs-border-color:                     @gray-light;
 
-@nav-tabs-link-hover-border-color:          @tef-color-gray-light;
+@nav-tabs-link-hover-border-color:          @gray-lighter;
 
 @nav-tabs-active-link-hover-bg:             @body-bg;
 @nav-tabs-active-link-hover-color:          @text-color;
-@nav-tabs-active-link-hover-border-color:   @tef-color-gray-light;
+@nav-tabs-active-link-hover-border-color:   @gray-light;
 
-@nav-tabs-justified-link-border-color:            @tef-color-gray-light;
+@nav-tabs-justified-link-border-color:            @gray-light;
 @nav-tabs-justified-active-link-border-color:     @body-bg;
 
 //== Pills
@@ -449,19 +449,19 @@
 
 @pagination-color:                     @link-color;
 @pagination-bg:                        @tef-color-white;
-@pagination-border:                    @tef-color-gray-light;
+@pagination-border:                    @gray-light;
 
-@pagination-hover-color:               @tef-color-link-dark;
+@pagination-hover-color:               @tef-color-link-light;
 @pagination-hover-bg:                  @gray-lighter;
-@pagination-hover-border:              @tef-color-gray-light;
+@pagination-hover-border:              @gray-light;
 
 @pagination-active-color:              @component-active-color;
 @pagination-active-bg:                 @component-active-bg;
-@pagination-active-border:             @component-active-bg;
+@pagination-active-border:             @gray-light;
 
-@pagination-disabled-color:            @tef-color-gray-light;
+@pagination-disabled-color:            @gray-lighter;
 @pagination-disabled-bg:               @tef-color-white;
-@pagination-disabled-border:           @tef-color-gray-light;
+@pagination-disabled-border:           @gray-light;
 
 
 //== Pager
@@ -540,9 +540,9 @@
 //** Popover maximum width
 @popover-max-width:                   276px;
 //** Popover border color
-@popover-border-color:                @tef-color-gray-light;
+@popover-border-color:                @gray-light;
 //** Popover fallback border color
-@popover-fallback-border-color:       @tef-color-gray-light;
+@popover-fallback-border-color:       @gray-light;
 
 //** Popover title background color
 @popover-title-bg:                    darken(@popover-bg, 3%);
@@ -565,7 +565,7 @@
 //##
 
 //** Default label background color
-@label-default-bg:            @tef-color-gray;
+@label-default-bg:            @gray;
 //** Primary label background color
 @label-primary-bg:            @brand-primary;
 //** Success label background color
@@ -598,9 +598,9 @@
 //** Background color of modal content area
 @modal-content-bg:                             @tef-color-white;
 //** Modal content border color
-@modal-content-border-color:                   @tef-color-gray-medium;
+@modal-content-border-color:                   @gray-light;
 //** Modal content border color **for IE8**
-@modal-content-fallback-border-color:          @tef-color-gray-medium;
+@modal-content-fallback-border-color:          @gray-light;
 
 //** Modal backdrop background color
 @modal-backdrop-bg:           @tef-color-black;
@@ -671,7 +671,7 @@
 //** Background color on `.list-group-item`
 @list-group-bg:                 @tef-color-white;
 //** `.list-group-item` border color
-@list-group-border:             @tef-color-gray-light;
+@list-group-border:             @gray-light;
 //** List group border radius
 @list-group-border-radius:      @border-radius-base;
 
@@ -687,15 +687,15 @@
 @list-group-active-text-color:  @tef-color-white;
 
 //** Text color of disabled list items
-@list-group-disabled-color:      @tef-color-gray-light;
+@list-group-disabled-color:      @gray-lighter;
 //** Background color of disabled list items
 @list-group-disabled-bg:         @tef-color-bg-01;
 //** Text color for content within disabled list items
 @list-group-disabled-text-color: @list-group-disabled-color;
 
-@list-group-link-color:         #555;
+@list-group-link-color:         @gray;
 @list-group-link-hover-color:   @list-group-link-color;
-@list-group-link-heading-color: #333;
+@list-group-link-heading-color: @gray-dark;
 
 
 //== Panels
@@ -709,11 +709,11 @@
 @panel-border-radius:         @border-radius-base;
 
 //** Border color for elements within panels
-@panel-inner-border:          @tef-color-gray-light;
+@panel-inner-border:          @gray-light;
 @panel-footer-bg:             @tef-color-bg-01;
 
 @panel-default-text:          @text-color;
-@panel-default-border:        @tef-color-gray-light;
+@panel-default-border:        @gray-light;
 @panel-default-heading-bg:    @tef-color-bg-04;
 
 @panel-primary-text:          @tef-color-white;
@@ -746,7 +746,7 @@
 //** Thumbnail background color
 @thumbnail-bg:                @body-bg;
 //** Thumbnail border color
-@thumbnail-border:            @tef-color-gray-light;
+@thumbnail-border:            @gray-light;
 //** Thumbnail border radius
 @thumbnail-border-radius:     @border-radius-base;
 
@@ -760,18 +760,18 @@
 //
 //##
 
-@well-bg:                     @tef-color-bg-04;
-@well-border:                 @tef-color-gray-medium;
+@well-bg:                     @tef-color-bg-03;
+@well-border:                 @gray-light;
 
 
 //== Badges
 //
 //##
 
-@badge-color:                 @tef-color-white;
+@badge-color:                 @text-color;
 //** Linked badge text color on hover
 @badge-link-hover-color:      @tef-color-white;
-@badge-bg:                    @tef-color-gray;
+@badge-bg:                    @tef-color-bg-04;
 
 //** Badge text color in active nav link
 @badge-active-color:          @link-color;
@@ -792,7 +792,7 @@
 //** Breadcrumb background color
 @breadcrumb-bg:                 @tef-color-bg-01;
 //** Breadcrumb text color
-@breadcrumb-color:              @tef-color-gray;
+@breadcrumb-color:              @gray-darker;
 //** Text color of current page in the breadcrumb
 @breadcrumb-active-color:       @component-active-bg;
 //** Textual separator for between breadcrumb elements
@@ -803,7 +803,7 @@
 //
 //##
 
-@carousel-text-shadow:                        0 1px 2px @tef-color-gray-light;
+@carousel-text-shadow:                        0 1px 2px @gray-light;
 
 @carousel-control-color:                      @tef-color-white;
 @carousel-control-width:                      15%;
@@ -848,22 +848,22 @@
 //** Horizontal offset for forms and lists.
 @component-offset-horizontal: 180px;
 //** Text muted color
-@text-muted:                  @tef-color-gray-medium;
+@text-muted:                  @gray-light;
 //** Abbreviations and acronyms border color
-@abbr-border-color:           @tef-color-gray-medium;
+@abbr-border-color:           @gray-light;
 //** Headings small color
-@headings-small-color:        @tef-color-gray-medium;
+@headings-small-color:        @gray-light;
 //** Blockquote small color
-@blockquote-small-color:      @tef-color-gray-medium;
+@blockquote-small-color:      @gray-light;
 //** Blockquote font size
 @blockquote-font-size:        (@font-size-base * 1.25);
 //** Blockquote border color
 @blockquote-border-color:     @tef-color-highlight-purple;
 //** Page header border color
-@page-header-border-color:    @tef-color-gray-light;
+@page-header-border-color:    @gray-lighter;
 //** Width of horizontal description list titles
 @dl-horizontal-offset:        @component-offset-horizontal;
 //** Point at which .dl-horizontal becomes horizontal
 @dl-horizontal-breakpoint:    @grid-float-breakpoint;
 //** Horizontal line color.
-@hr-border:                   @tef-color-gray-light;
+@hr-border:                   @gray-lighter;

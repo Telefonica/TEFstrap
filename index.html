@@ -24,7 +24,7 @@
   <div class="container">
     <div class="navbar-header">
       <a class="navbar-brand" href="./">
-        <img alt="Telefónica" src="./dist/img/logo.png"/>
+        <img class="ts-telefonica-logo" alt="Telefónica" src="./dist/img/logo.png"/>
       </a>
       <button class="navbar-toggle" type="button" data-toggle="collapse"
               data-target="#navbar-main">
@@ -72,26 +72,50 @@
 
   <div id="banner" style="position: relative">
     <div class="row">
-      <div class="col-lg-9 col-md-9 col-sm-8 ">
-
+      <div class="col-sm-8">
         <h1 class="ts-highlighted ts-highlighted-purple">TEFstrap</h1>
         <p class="lead">A Telefónica bootstrap 3 theme for quick prototyping</p>
-
-        <ul class="list-unstyled">
-          <li><iframe src="https://ghbtns.com/github-btn.html?user=Telefonica&repo=TEFstrap&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe></li>
-          <li><iframe src="https://ghbtns.com/github-btn.html?user=Telefonica&repo=TEFstrap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe></li>
-        </ul>
       </div>
-      <div class="col-lg-3 col-md-3 col-sm-4">
+      <div class="col-sm-4">
+        <p class="text-center">
+          <a class="bs-btn-download btn btn-primary btn-lg" href="https://github.com/Telefonica/TEFstrap/releases">
+            Download <span class="ts-highlighted ts-highlighted-orange">TEFstrap</span>
+          </a>
+        </p>
+        <p>
+          <code>npm install @telefonica/tefstrap</code>
+        </p>
+        <p>
+          <code>bower install tefstrap</code>
+        </p>
+
+        <p class="text-center">
+          <iframe src="https://ghbtns.com/github-btn.html?user=Telefonica&repo=TEFstrap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+        </p>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4 ">
         <div class="list-group bs-table-of-contents">
           <a class="list-group-item" href="#navbar">Navbar</a>
           <a class="list-group-item" href="#buttons">Buttons</a>
           <a class="list-group-item" href="#typography">Typography</a>
           <a class="list-group-item" href="#tables">Tables</a>
+
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="list-group bs-table-of-contents">
           <a class="list-group-item" href="#forms">Forms</a>
           <a class="list-group-item" href="#navs">Navs</a>
           <a class="list-group-item" href="#indicators">Indicators</a>
           <a class="list-group-item" href="#progress-bars">Progress bars</a>
+
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="list-group bs-table-of-contents">
           <a class="list-group-item" href="#containers">Containers</a>
           <a class="list-group-item" href="#dialogs">Dialogs</a>
           <a class="list-group-item" href="#highlighted">Highlights</a>
@@ -122,7 +146,7 @@
                   <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                  <img alt="Telefónica" src="./dist/img/logo.png"/>
+                  <img class="ts-telefonica-logo" alt="Telefónica" src="./dist/img/logo.png"/>
                 </a>
 
               </div>
@@ -328,7 +352,14 @@
           <a href="#" class="btn btn-primary btn-xs">Mini button</a>
         </p>
 
+        <div class="bs-component">
+          <a href="#" class="btn ts-btn-outline">Outline</a>
+          <div class="well" style="background-color: #006476; margin-top:15px">
+            <a href="#" class="btn ts-btn-outline-inverse">Outline Inverse</a>
+          </div>
+        </div>
       </div>
+
       <div class="col-lg-5">
 
         <p class="bs-component">
@@ -1130,7 +1161,7 @@
         </div>
         <div class="bs-component">
           <div class="jumbotron">
-            <h1>Jumbotron</h1>
+            <h1 class="ts-highlighted ts-highlighted-purple">Jumbotron</h1>
 
             <p>This is a simple hero unit, a simple jumbotron-style component
               for calling extra attention to featured content or
@@ -1474,7 +1505,7 @@
             href="https://github.com/thomaspark/bootswatch">Bootswatch</a>.
           </li>
           <li class="text-muted">
-            Hecho con ♥ en Telefónica I+D
+            Made with ♥ in Telefónica I+D
           </li>
         </ul>
       </div>
