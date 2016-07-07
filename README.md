@@ -13,7 +13,7 @@ Several quick start options are available:
 * Install with [Bower](http://bower.io): `bower install tefstrap`
 * Install with [npm](https://www.npmjs.com): `npm install @telefonica/tefstrap`
 
-Here you get the most basic form of TEFstrap: precompiled files for quick drop-in usage in nearly any web project. Just replace your original `bootstrap.css` with the TEFstrap one you downloaded, located at `dist/css/bootstrap.css` and copy the fonts `dist/fonts/` directory to your own one. 
+Here you get the most basic form of TEFstrap: precompiled files for quick drop-in usage in nearly any web project. Just replace your original `bootstrap.css` with the TEFstrap one you downloaded, located at `dist/css/bootstrap.css` and copy the fonts `dist/fonts/` and `dist/img` directory to your own one. 
 
 ## Hacking
 
