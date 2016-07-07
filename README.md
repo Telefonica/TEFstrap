@@ -22,7 +22,7 @@ The pre-compiled `bootstrap.css` distributed in `dist/` directory is precompiled
 the `less/`, `js/`, and `fonts/` are the source code for our CSS, JS, and fonts (respectively). 
 
 Three source files are provided in the `less` directory:
-* `less/tefstrap`: Custom components and variables for TEfstrap
+* `less/tefstrap.less`: Custom components and variables for TEfstrap
 * `less/variables.less`: A copy of bootstrap variables, but with the values for the Telefonica theme.
 * `less/bootstrap.less`: The main entry point for compile TEFstrap. Loads all bootstrap and applies the TEFstrap customizations. Here you can be quirurgic: make your own and just import your desired bootstap files, add the above two files and then compile it
 
