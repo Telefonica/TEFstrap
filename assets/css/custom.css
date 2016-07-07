@@ -48,7 +48,17 @@ body>.navbar {
 }
 
 #banner h1 {
-  font-size: 6em;
+  font-size: 4.5em;
+}
+
+#banner > .row {
+  margin-bottom: 75px;
+}
+
+@media (min-width: 768px) {
+  #banner h1 {
+    font-size: 5.5em;
+  }
 }
 
 .bs-company {
@@ -91,4 +101,8 @@ body>.navbar {
   float: left;
   margin-right: 1.5em;
   margin-bottom: 1.5em
+}
+
+.bs-btn-download {
+  margin: 40px auto;
 }

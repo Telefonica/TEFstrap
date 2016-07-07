@@ -39,9 +39,11 @@
 // Basics
 @tef-color-white: #FFFFFF;
 @tef-color-black: #000000;
-@tef-color-gray: #515559;
-@tef-color-gray-light: #DFDFDF;
-@tef-color-gray-medium: #898989; // Custom for TEFstrap
+@tef-color-gray-darker: #222; // Custom for TEFstrap
+@tef-color-gray-dark: #333; // Custom for TEFstrap
+@tef-color-gray: #515559; // Original
+@tef-color-gray-light: #999; // Custom for TEFstrap
+@tef-color-gray-lighter: #DFDFDF;// Original
 
 
 // Backgrounds
@@ -94,7 +96,7 @@
 // --------------------------------------------------
 
 .navbar-brand {
-  > img {
+  > img.ts-telefonica-logo {
     margin-top: -4px;
   }
 }
@@ -128,7 +130,7 @@
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   text-transform: uppercase;
-  color: @tef-color-blue03;
+  color: @tef-color-blue02;
 }
 
 //
@@ -165,21 +167,12 @@ h1, h2, h3, h4, h5, h6,
 }
 
 //
-// Jumbotron
-// --------------------------------------------------
-.jumbotron {
-  h1, .h1,
-  h2, .h2,
-  h3, .h3
-  {
-    .ts-highlighted;
-    .ts-highlighted-purple;
-  }
-}
-
-//
 // Custom components
 // --------------------------------------------------
+
+// Highligted_
+///
+
 
 .ts-highlighted {
   text-transform: none;
@@ -216,3 +209,30 @@ h1, h2, h3, h4, h5, h6,
     color: @tef-color-highlight-purple;
   }
 }
+
+/* Outline button for use within the docs */
+.ts-btn-outline {
+  color: @brand-primary;
+  background-color: transparent;
+  border-color: @brand-primary;
+
+  &:hover, &:focus, &:active {
+    color: @tef-color-white;
+    background-color: @brand-primary;
+    border-color: @brand-primary;
+  }
+}
+
+/* Inverted outline button (white on dark) */
+.ts-btn-outline-inverse {
+  color: @tef-color-white;
+  background-color: transparent;
+  border-color: @tef-color-white;
+  &:hover, &:focus, &:active {
+    color: @brand-primary;
+    text-shadow: none;
+    background-color: @tef-color-white;
+    border-color: @tef-color-white;
+  }
+}
+
