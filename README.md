@@ -21,7 +21,7 @@ The pre-compiled `bootstrap.css` distributed in `dist/` directory is precompiled
 the `less/`, `js/`, and `fonts/` are the source code for our CSS, JS, and fonts (respectively). 
 
 Three source files are provided in the `less` directory:
-.* `less/tefstrap`: Custom components and variables for TEfstrap
+* `less/tefstrap`: Custom components and variables for TEfstrap
 * `less/variables.less`: A copy of bootstrap variables, but with the values for the Telefonica theme.
 * `less/bootstrap.less`: The main entry point for compile TEFstrap. Loads all bootstrap and applies the TEFstrap customizations. Here you can be quirurgic: make your own and just import your desired bootstap files, add the above two files and then compile it
 
@@ -37,10 +37,10 @@ First of all, [download and install NodeJS](https://nodejs.org).
 git clone https://github.com/Telefonica/TEFstrap.git
 cd TEFstrap
 npm install # Install node dependencies for this project
-npm run dev # Start development watchers, to auto compile less and generate assets
+npm run build # Build (i.e compile/autoprefix/minify) assets
+npm run dev # Start development watchers, to auto compile less
 open index.html # Open the index.html with your default browser
 ```
-
 
 # LICENSE
 
