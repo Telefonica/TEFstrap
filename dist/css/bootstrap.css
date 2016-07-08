@@ -3526,7 +3526,7 @@ tbody.collapse.in {
 .dropdown-menu > li > a:focus {
   text-decoration: none;
   color: #262626;
-  background-color: #F6F7F9;
+  background-color: #F1F3F2;
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
@@ -5214,7 +5214,7 @@ a.list-group-item:focus,
 button.list-group-item:focus {
   text-decoration: none;
   color: #515559;
-  background-color: #EDF2F5;
+  background-color: #F1F3F2;
 }
 button.list-group-item {
   width: 100%;
