@@ -17,18 +17,18 @@ Here you get the most basic form of TEFstrap: precompiled files for quick drop-i
 
 ## Hacking
 
-After downloading the proyect, you can modify and compile your own distributon with your own customizations, or just pick some parts. 
+After downloading the project, you can modify and compile your own distributon with your own customizations, or just pick some parts. 
 The pre-compiled `bootstrap.css` distributed in `dist/` directory is precompiled and minified, and  
 the `less/`, `js/`, and `fonts/` are the source code for our CSS, JS, and fonts (respectively). 
 
 Three source files are provided in the `less` directory:
-* `less/tefstrap.less`: Custom components and variables for TEfstrap
+* `less/tefstrap.less`: Custom components and variables for TEFstrap.
 * `less/variables.less`: A copy of bootstrap variables, but with the values for the Telefonica theme.
-* `less/bootstrap.less`: The main entry point for compile TEFstrap. Loads all bootstrap and applies the TEFstrap customizations. Here you can be quirurgic: make your own and just import your desired bootstap files, add the above two files and then compile it
+* `less/bootstrap.less`: The main entry point for compile TEFstrap. Loads all bootstrap and applies the TEFstrap customizations. Here you can be quirurgic: make your own and just import your desired bootstap files, add the above two files and then compile it.
 
-Both boostrap and tefstrap does not add proactively all the browser vendor prefixes. Therefore you will need to use the [`autoprefixer`](https://github.com/postcss/autoprefixer) tool. 
+Both boostrap and TEFstrap does not proactively add all the browser vendor prefixes. Therefore you will need to use the [`autoprefixer`](https://github.com/postcss/autoprefixer) tool. 
 
-Finally take a look to our `package.json#scripts.build` for inspiration about how to compile/autoprefix/minify less files and generate the CSS ones
+Finally take a look to our `package.json#scripts.build` for inspiration about how to compile/autoprefix/minify less files and generate the CSS ones.
 
 ## Development
 
@@ -45,7 +45,7 @@ open index.html # Open the index.html with your default browser
 
 # LICENSE
 
-Copyright (c) 2011-2016 [Telefónica I+D](https://tid.es). Code released under the [MIT license](LICENSE). 
+Copyright (c) 2011-2016 [Telefónica I+D](http://tid.es). Code released under the [MIT license](LICENSE). 
 
 [Bootstrap](https://github.com/twbs/bootstrap): copyright 2011-2016 Twitter, Inc. Code released under the [MIT license](https://github.com/twbs/bootstrap/blob/master/LICENSE).
 
